@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+}
+
+/* set global font size, then media query for responsive font-size */
+
+body {
+    background-color: rgb(220, 231, 235);
+    font-family: 'Special Elite', Courier, cursive;
+    color: rgb(48, 48, 48);
+}
+
+/* ------ HEADER ------- */
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* poloroid stacks */
+
+.polaroid {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.30);
+}
+
+.polaroid,
+.polaroid:before,
+.polaroid:after {
+    border: 1px solid #bbb;
+}
+
+.polaroid:before,
+.polaroid:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.polaroid:before {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.35);
+    background-color: #eee;
+    right: 10px;
+    top: 0;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.polaroid:after {
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+    background-color: #ddd;
+    top: 10px;
+    right: -15px;
+    transform: rotate(2deg);
+    z-index: -2;
+}
+
+.image {
+    width: 200px;
+    filter: grayscale(30%);
+    animation: polaroid-develop 20s ease-in;
+}
+
+@media (min-width: 600px) {
+    .image { width: 300px; }
+}
+
+@keyframes polaroid-develop {
+    from {
+        filter: brightness(10%) grayscale(0%);
+    }
+
+    to {
+        filter: brightness(100%) grayscale(30%);
+    }
+}
+
+.caption {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2rem;
+    color: #e22528;
+    opacity: 0.8;
+    text-transform: capitalize;
+    margin: 15px 0 20px;
+    transform: rotate(3deg);
+}
+
+/* header text content */
+
+.info {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headline,
+.sub-headline,
+.menu-item {
+    background-color: white;
+    padding: 5px 10px;
+    margin: 12px;
+}
+
+.headline {
+    transform: rotate(1deg);
+    font-size: 3.5rem;
+}
+
+.sub-headline {
+    transform: rotate(-2deg);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.menu-item {
+    transition: transform 200ms ease-in-out, color 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    transform: rotate(-3deg);
+    color: #e22528;
+}
