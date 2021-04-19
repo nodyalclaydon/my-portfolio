@@ -5,19 +5,28 @@
 /* set global font size, then media query for responsive font-size */
 
 body {
-    background-color: rgb(220, 231, 235);
+    background-color: rgb(221, 213, 213);
     font-family: 'Special Elite', Courier, cursive;
     color: rgb(48, 48, 48);
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
-/* ------ HEADER ------- */
+section {
+    position: relative;
+    padding: 10em;
+    height: calc(100vh - 20em);
+    scroll-snap-align: start;
+}
+
+/* ------ HEADER SECTION ------- */
 
 .header-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 /* poloroid stacks */
@@ -29,6 +38,7 @@ body {
     position: relative;
     background: #fff;
     padding: 20px;
+    height: fit-content;
     margin: 15px;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.30);
 }
@@ -67,7 +77,7 @@ body {
 
 .image {
     width: 200px;
-    filter: grayscale(30%);
+    filter: grayscale(20%);
     animation: polaroid-develop 20s ease-in;
 }
 
@@ -77,11 +87,11 @@ body {
 
 @keyframes polaroid-develop {
     from {
-        filter: brightness(10%) grayscale(0%);
+        filter: brightness(15%) grayscale(0%);
     }
 
     to {
-        filter: brightness(100%) grayscale(30%);
+        filter: brightness(100%) grayscale(20%);
     }
 }
 
@@ -101,7 +111,7 @@ body {
     margin: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .headline,
@@ -135,4 +145,28 @@ body {
 .menu-item:hover {
     transform: rotate(-3deg);
     color: #e22528;
+}
+
+/* ------- ABOUT SECTION -------- */
+
+.about-container {
+    background-color: rgb(219, 177, 177);
+}
+
+/* ------- SKILLS SECTION -------- */
+
+.skills-container {
+    background-color: rgb(198, 224, 198);
+}
+
+/* ------- WORK SECTION -------- */
+
+.work-container {
+    background-color: rgb(231, 231, 210);
+}
+
+/* ------- CONTACT SECTION -------- */
+
+.contact-container {
+    background-color: rgb(212, 190, 212);
 }
