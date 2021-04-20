@@ -2,11 +2,12 @@
 <html>
     <head>
         <link href="index.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no" />
     </head>
     <body>
+        <div class="scroll-container">
         <section class="header-container">
             <div class="polaroid">
                 <img src="img/clay.jpeg" alt="portrait" class="image" />
@@ -16,28 +17,41 @@
                 <h1 class="headline">web developer</h1>
                 <h2 class="sub-headline">overland park, ks</h2>
                 <ul class="menu">
-                    <li class="menu-item">about me</li>
-                    <li class="menu-item">skills</li>
-                    <li class="menu-item">projects</li>
-                    <li class="menu-item">contact</li>
+                    <li class="menu-item"><a href="#about">about me</a></li>
+                    <li class="menu-item"><a href="#skills">skills</a></li>
+                    <li class="menu-item"><a href="#work">projects</a></li>
+                    <li class="menu-item"><a href="#contact">contact</a></li>
                 </ul>
             </div>
         </section>
+        <a id ="about">
         <section class="about-container">
-            <h1>About</h1>
-            <p>just some placeholder text...</p>
+            <h1 class="about-header">Hi, my name is Clay.</h1>
+            <p class="about-para">I am a self-taught computer programmer who loves to code. Want to see what I can do?</p>
         </section>
+        </a>
+
+        <a id="skills">
         <section class="skills-container">
             <h1>Skills</h1>
             <p>just some placeholder text...</p>
         </section>
+        </a>
+
+        <a id="work">
         <section class="work-container">
             <h1>Work</h1>
             <p>just some placeholder text...</p>
         </section>
+        </a>
+
+        <a id="contact">
         <section class="contact-container">
             <h1>Contact</h1>
             <p>just some placeholder text...</p>
         </section>
+        </a>
+
+        </div> <!--scroll-container end-->
     </body>
 </html>

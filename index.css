@@ -2,18 +2,31 @@
     margin: 0;
 }
 
+:root {
+    --blue: #036590;
+    --light-blue: #E1ECF2;
+    --dark-blue: #003B43;
+    --neutral: #C3C09F;
+    --red-accent: #DB4E30;
+    --orange-accent: #FBB53B;
+}
+
 /* set global font size, then media query for responsive font-size */
 
 body {
-    background-color: rgb(221, 213, 213);
+    background-color: var(--light-blue);
     font-family: 'Special Elite', Courier, cursive;
     color: rgb(48, 48, 48);
+}
+
+.scroll-container {
+    height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 section {
-    position: relative;
     padding: 10em;
     height: calc(100vh - 20em);
     scroll-snap-align: start;
@@ -96,12 +109,12 @@ section {
 }
 
 .caption {
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 2rem;
-    color: #e22528;
+    font-family: 'Rock Salt', cursive;
+    font-size: 1.5rem;
+    color: var(--red-accent);
     opacity: 0.8;
     text-transform: capitalize;
-    margin: 15px 0 20px;
+    margin: 20px 0 15px;
     transform: rotate(3deg);
 }
 
@@ -114,8 +127,7 @@ section {
     justify-content: flex-start;
 }
 
-.headline,
-.sub-headline,
+h1, h2, p,
 .menu-item {
     background-color: white;
     padding: 5px 10px;
@@ -137,6 +149,11 @@ section {
     list-style-type: none;
 }
 
+a { 
+    text-decoration: none; 
+    color: inherit;
+}
+
 .menu-item {
     transition: transform 200ms ease-in-out, color 200ms ease-in-out;
     cursor: pointer;
@@ -144,29 +161,29 @@ section {
 
 .menu-item:hover {
     transform: rotate(-3deg);
-    color: #e22528;
+    color: var(--red-accent);
 }
 
 /* ------- ABOUT SECTION -------- */
 
 .about-container {
-    background-color: rgb(219, 177, 177);
+    background-color: var(--red-accent);
 }
 
 /* ------- SKILLS SECTION -------- */
 
 .skills-container {
-    background-color: rgb(198, 224, 198);
+    background-color: var(--orange-accent);
 }
 
 /* ------- WORK SECTION -------- */
 
 .work-container {
-    background-color: rgb(231, 231, 210);
+    background-color: var(--blue);
 }
 
 /* ------- CONTACT SECTION -------- */
 
 .contact-container {
-    background-color: rgb(212, 190, 212);
+    background-color: var(--dark-blue);
 }
