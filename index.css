@@ -1,5 +1,8 @@
+/* -------- GLOBAL STYLES -------- */
+
 * {
     margin: 0;
+    font-size: 16px;
 }
 
 :root {
@@ -28,9 +31,31 @@ body {
 }
 
 section {
-    padding: 10em 0;
-    height: calc(100vh - 20em);
+    padding: .5em;
+    height: calc(100vh - 0.5em);
     scroll-snap-align: start;
+}
+
+.section-header {
+    font-size: 3rem;
+    padding: 5px 15px;
+    margin: .5em;
+    width: fit-content;
+}
+
+.section-text {
+    font-size: 1.25rem;
+    padding: 5px 10px;
+    margin-top: 1em;
+    width: fit-content;
+}
+
+.tilt-a {
+    transform: rotate(1deg);
+}
+
+.tilt-b {
+    transform: rotate(-2deg);
 }
 
 /* ------ HEADER SECTION ------- */
@@ -38,7 +63,8 @@ section {
 .header-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    max-width: 1000px;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -53,7 +79,6 @@ section {
     background: #fff;
     padding: 20px;
     height: fit-content;
-    margin: 15px;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.30);
 }
 
@@ -91,17 +116,13 @@ section {
 
 .image {
     width: 200px;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     filter: grayscale(20%);
 }
 
 .image-develop {
     animation: polaroid-develop 20s ease-in;
-}
-
-@media (min-width: 600px) {
-    .image { width: 300px; }
 }
 
 @keyframes polaroid-develop {
@@ -116,43 +137,49 @@ section {
 
 .caption {
     font-family: 'Rock Salt', cursive;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--red-accent);
     opacity: 0.8;
     text-transform: capitalize;
-    margin: 20px 0 15px;
+    margin: 10px 0;
     transform: rotate(3deg);
 }
 
 /* header text content */
 
 .info {
-    margin: 15px;
+    /* width: 100%; !makes it stay along bottom! */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 h1, h2, p,
 .menu-item {
+    display: block;
     background-color: white;
-    padding: 5px 10px;
-    margin: 12px;
+}
+
+.headline, .sub-headline {
+    width: fit-content;
+    padding: 5px 15px;
 }
 
 .headline {
-    transform: rotate(1deg);
-    font-size: 3.5rem;
+    font-size: 2.75rem;
 }
 
 .sub-headline {
-    transform: rotate(-2deg);
+    font-size: 1.25rem;
+    margin-top: 15px;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
-    list-style-type: none;
+    margin-left: -2em; /* solution to: for some reason, the menu has a ghost left margin */
+    justify-content: space-around;
+    margin-top: 15px;
 }
 
 a { 
@@ -163,6 +190,7 @@ a {
 .menu-item {
     transition: transform 200ms ease-in-out, color 200ms ease-in-out;
     cursor: pointer;
+    padding: 5px;
 }
 
 .menu-item:hover {
@@ -208,7 +236,7 @@ a {
 
 .project-card-flip-container {
     perspective: 800px;
-    margin: 0 10em;
+    margin: 0 5em;
 }
 
 .project-card {
@@ -221,12 +249,6 @@ a {
     scroll-snap-align: center;
     transition: transform 800ms ease-in-out;
     transform-style: preserve-3d;
-}
-
-@media (min-width: 600px) {
-    .project-card {
-        width: 300px;
-    }
 }
 
 .flipped {
@@ -250,4 +272,25 @@ a {
 
 .contact-container {
     background-color: var(--dark-blue);
+}
+
+/* ======= MEDIA QUERIES ======== */
+
+@media (min-width: 400px) {
+    * { font-size: 18px; }
+
+    .image { width: 250px; }
+    .project-card { width: 250px; }
+}
+
+@media (min-width: 600px) {
+    * { font-size: 20px; }
+    .image { width: 300px; height: 325px; }
+    .project-card { width: 300px }
+    section { padding: 1.5em; }
+    .menu { margin-top: 30px; }
+}
+
+@media (min-width: 1000px) {
+    * { font-size: 25px; }
 }
