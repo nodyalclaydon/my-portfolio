@@ -14,8 +14,6 @@
     --orange-accent: #FBB53B;
 }
 
-/* set global font size, then media query for responsive font-size */
-
 body {
     background-color: var(--light-blue);
     font-family: 'Special Elite', Courier, cursive;
@@ -148,7 +146,6 @@ section {
 /* header text content */
 
 .info {
-    /* width: 100%; !makes it stay along bottom! */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -156,7 +153,6 @@ section {
 
 h1, h2, p,
 .menu-item {
-    /* display: block; */
     background-color: white;
 }
 
@@ -177,7 +173,6 @@ h1, h2, p,
 .menu {
     display: flex;
     flex-direction: row;
-    margin-left: -2em; /* solution to: for some reason, the menu has a ghost left margin */
     justify-content: space-around;
     margin-top: 15px;
 }
@@ -300,10 +295,57 @@ a {
     background-color: var(--dark-blue);
 }
 
+/* media query for form...make message move up on right side on larger screens */
+
+#form {
+    margin: 1em auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+.form-inputs {
+    margin: .25em 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: .75rem;
+    border: none;
+    outline: none;
+    transition: background-color 200ms ease-in-out;
+}
+
+.form-inputs:focus {
+    background-color: var(--light-blue);
+}
+
+label {
+    font-family: sans-serif;
+    color: white;
+    font-size: .75rem;
+}
+
+#submit-btn {
+    background-color: var(--red-accent);
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+#submit-btn:hover {
+    transform: scale(1.03);
+}
+
 /* ======= MEDIA QUERIES ======== */
 
 @media (min-width: 400px) {
     * { font-size: 18px; }
+
+    .icon { width: 80px; }
 
     .image { width: 250px; }
     .project-card { width: 250px; }
@@ -311,12 +353,18 @@ a {
 
 @media (min-width: 600px) {
     * { font-size: 20px; }
+
+    .icon { width: 100px; margin: 1.5em; }
+
     .image { width: 300px; height: 325px; }
     .project-card { width: 300px }
+
     section { padding: 1.5em; }
     .menu { margin-top: 30px; }
 }
 
 @media (min-width: 1000px) {
-    * { font-size: 25px; }
+    * { font-size: 22px; }
+
+    .icon { width: 120px; margin: 2em; }
 }
