@@ -58,11 +58,15 @@
                     <div class="project-card">
                         <div class="project-card-front">
                             <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">clay raymer, 2021</h1>
+                            <h1 class="caption">photo store</h1>
                         </div>
                         <div class="project-card-back">
-                            <h1 class="project-info-header">Project Title</h1>
-                            <p class="project-info">placeholder text for project information</p>
+                            <h1 class="project-info-header">react photography store</h1>
+                            <p class="project-info">Store website built in React with styled components. 
+                                Users can browse three different categories of photography, add images to
+                                their cart and checkout. Photography is from the Unsplash API, and photographers
+                                are credited on each image card.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -71,11 +75,14 @@
                     <div class="project-card">
                         <div class="project-card-front">
                             <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">clay raymer, 2021</h1>
+                            <h1 class="caption">Quiz Game</h1>
                         </div>
                         <div class="project-card-back">
-                            <h1 class="project-info-header">Project Title</h1>
-                            <p class="project-info">placeholder text for project information</p>
+                            <h1 class="project-info-header">Quiz Game</h1>
+                            <p class="project-info">Test your knowledge by taking this quiz. Quiz questions and answers
+                                come from the open trivia databasse API. Users select one of 8 categories and determine
+                                quiz length. A score of 50% or higher is required to pass...which is easier said than done.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -84,11 +91,14 @@
                     <div class="project-card">
                         <div class="project-card-front">
                             <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">clay raymer, 2021</h1>
+                            <h1 class="caption">pacman!</h1>
                         </div>
                         <div class="project-card-back">
-                            <h1 class="project-info-header">Project Title</h1>
-                            <p class="project-info">placeholder text for project information</p>
+                            <h1 class="project-info-header">pacman game</h1>
+                            <p class="project-info">Who doesn't love pacman! This project is built in vanilla javascript
+                                and relies heavily on css animations for smooth character movements. If you can complete 
+                                level one, I'll create level two next.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -97,11 +107,15 @@
                     <div class="project-card">
                         <div class="project-card-front">
                             <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">clay raymer, 2021</h1>
+                            <h1 class="caption">Netflix clone</h1>
                         </div>
                         <div class="project-card-back">
-                            <h1 class="project-info-header">Project Title</h1>
-                            <p class="project-info">placeholder text for project information</p>
+                            <h1 class="project-info-header">Netflix Clone</h1>
+                            <p class="project-info">This was a project from a course on Scrimba. It is built
+                                in React and uses styled components. Users can create an account (firebase) and
+                                login to browse films and series. Aside from only having one playable video, 
+                                this is a complete replica of Netflix.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +127,7 @@
         <section class="contact-container">
             <h1 class="section-header tilt-a">Contact</h1>
             <p class="section-text tilt-b">let's talk!</p>
-            <!-- DISABLE FORM IF NOT FILLED OUT!!!! -->
+            <!-- DISABLE FORM IF NOT FILLED OUT!!!! and empty fields after submit -->
             <form 
                 accept-charset="UTF-8"    
                 action="https://getform.io/f/7b9c1fe9-d3c1-455e-ac74-69ce83480ff6" 
@@ -121,13 +135,13 @@
                 enctype="multipart/form-data"
                 target="_blank" id="form">
                 <label for="full-name">full name:</label><br>
-                <input class="form-inputs" type="text" name="name" id="full-name"><br><br>
+                <input class="form-inputs" type="text" name="name" id="full-name" required><br><br>
                 <label for="email">email address:</label><br>
-                <input class="form-inputs" type="email" name="email" id="email"><br><br>
+                <input class="form-inputs" type="email" name="email" id="email" required><br><br>
                 <label for="subject">subject:</label><br>
-                <input class="form-inputs" type="text" name="subject" id="subject"><br><br>
+                <input class="form-inputs" type="text" name="subject" id="subject" required><br><br>
                 <label for="message">message:</label><br>
-                <textarea class="form-inputs" type="text" name="message" rows="8" id="message"></textarea><br><br>
+                <textarea class="form-inputs" type="text" name="message" rows="8" id="message" required></textarea><br><br>
                 <button type="submit" id="submit-btn">send</button>
               </form>
         </section>

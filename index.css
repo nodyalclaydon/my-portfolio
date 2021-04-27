@@ -35,14 +35,14 @@ section {
 }
 
 .section-header {
-    font-size: 3rem;
+    font-size: 2.75rem;
     padding: 5px 15px;
-    margin: .5em;
+    margin: 0 .5em .5em;
     width: fit-content;
 }
 
 .section-text {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 5px 10px;
     margin-top: 1em;
     width: fit-content;
@@ -136,6 +136,7 @@ section {
 .caption {
     font-family: 'Rock Salt', cursive;
     font-size: 1rem;
+    text-align: center;
     color: var(--red-accent);
     opacity: 0.8;
     text-transform: capitalize;
@@ -148,7 +149,7 @@ section {
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 h1, h2, p,
@@ -173,6 +174,7 @@ h1, h2, p,
 .menu {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 15px;
 }
@@ -185,6 +187,7 @@ a {
 .menu-item {
     transition: transform 200ms ease-in-out, color 200ms ease-in-out;
     cursor: pointer;
+    margin: .5em .5em;
     padding: 5px;
     list-style-type: none;
 }
@@ -198,10 +201,14 @@ a {
 
 .about-container {
     background-color: var(--red-accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 .5em 1em 2em;
 }
 
 .about-text {
-    margin: 3em 0;
+    margin: 0 0 0 2em;
 }
 
 /* ------- SKILLS SECTION -------- */
@@ -285,8 +292,23 @@ a {
 .project-card-back {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
+    padding: 1em .5em;
+    overflow: scroll;
     background-color: var(--light-blue);
     transform: rotateX(-180deg);
+}
+
+.project-info-header {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    margin-bottom: 1em;
+    padding: .5em;
+}
+
+.project-info {
+    font-size: .75rem;
+    line-height: 1.5em;
+    padding: .5em;
 }
 
 /* ------- CONTACT SECTION -------- */
@@ -328,6 +350,7 @@ label {
     background-color: var(--red-accent);
     border-radius: 5px;
     border: none;
+    font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 8px 16px;
