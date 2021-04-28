@@ -1,48 +1,27 @@
-//ICON POP ANIMATIONS
 const icons = document.querySelectorAll(".icon")
+const aboutLines = document.querySelectorAll(".about-text")
 
-const iconOptions = { 
+const appearOptions = {
     root: null,
-    threshold: 1,
+    threshold: 0,
     rootMargin: "-150px 0px"
 }
 
-const iconObserver = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-       if (!entry.isIntersecting) {
-           entry.target.classList.remove("pop")
-       } else {
-        entry.target.classList.add("pop")
-       }
-    })
-}, iconOptions)
-
-icons.forEach(icon => {
-    iconObserver.observe(icon)
-})
-
-//ABOUT LINES ANIMATIONS
-const aboutContainer = document.querySelector(".about-container")
-const aboutLines = document.querySelectorAll(".about-text")
-
-const aboutLinesOptions = {
-    root: null,
-    threshold: 1,
-    rootMargin: "0px"
-}
-
-const aboutLinesObserver = new IntersectionObserver(function(entries, observer) {
+const appearObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
-            aboutLines.forEach(line => {
-                line.classList.remove("swipe")
-            })
+            entry.target.classList.remove("appear")
         } else {
-            aboutLines.forEach(line => {
-                line.classList.add("swipe")
-            })
+            entry.target.classList.add("appear")
+            // appearObserver.unobserve(entry.target)
         }
     })
-}, aboutLinesOptions)
+}, appearOptions)
 
-aboutLinesObserver.observe(aboutContainer)
+aboutLines.forEach(line => {
+    appearObserver.observe(line)
+})
+
+icons.forEach(icon => {
+    appearObserver.observe(icon)
+})

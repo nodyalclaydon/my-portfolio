@@ -204,6 +204,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     padding: 0 .5em 1em 2em;
 }
 
@@ -212,20 +213,40 @@ a {
 }
 
 .about-text {
-    /* margin: 0 0 0 2em; */
-    margin-left: 100%;
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin: 3em 0 3em;
+    width: fit-content;
+    display: inline-block;
+}
+
+.swipe-right,
+.swipe-left {
+    transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+    opacity: 0;
     overflow: hidden;
-    margin-bottom: 2em;
 }
 
-.swipe {
-    animation: swipe-in 500ms;
-    margin-left: 0;
+.swipe-right {
+    transform: translateX(90%);
 }
 
-@keyframes swipe-in {
-    from { margin-left: 100%; transform: scale(0.5) }
-    to { margin-left: 0; transform: scale(1) }
+.swipe-left {
+    transform: translateX(-90%);
+}
+
+.swipe-right.appear,
+.swipe-left.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.swipe-right.appear {
+    transform: rotate(2deg);
+}
+
+.swipe-left.appear {
+    transform: rotate(-3deg);
 }
 
 /* ------- SKILLS SECTION -------- */
@@ -250,7 +271,7 @@ a {
     transform: scale(0);
 }
 
-.pop {
+.icon.appear {
     animation: icon-pop 700ms ease-in-out;
     transform: scale(1);
 }
