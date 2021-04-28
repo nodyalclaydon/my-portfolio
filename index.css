@@ -30,7 +30,7 @@ body {
 
 section {
     padding: .5em;
-    height: calc(100vh - 0.5em);
+    height: calc(100vh - 1em);
     scroll-snap-align: start;
 }
 
@@ -203,12 +203,29 @@ a {
     background-color: var(--red-accent);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 0 .5em 1em 2em;
 }
 
+.about-container .section-header {
+    margin-top: 1em;
+}
+
 .about-text {
-    margin: 0 0 0 2em;
+    /* margin: 0 0 0 2em; */
+    margin-left: 100%;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.swipe {
+    animation: swipe-in 500ms;
+    margin-left: 0;
+}
+
+@keyframes swipe-in {
+    from { margin-left: 100%; transform: scale(0.5) }
+    to { margin-left: 0; transform: scale(1) }
 }
 
 /* ------- SKILLS SECTION -------- */
@@ -230,12 +247,29 @@ a {
     padding: 1em;
     margin: 1em;
     box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.30);
+    transform: scale(0);
+}
+
+.pop {
+    animation: icon-pop 700ms ease-in-out;
+    transform: scale(1);
+}
+
+@keyframes icon-pop {
+    0% { transform: scale(0)}
+    50% { transform: scale(1.1) }
+    100% { transform: scale(1) }
 }
 
 /* ------- WORK SECTION -------- need to resize everything and make it responsive*/
 
 .work-container {
     background-color: var(--blue);
+    position: relative;
+}
+
+.work-container .section-text {
+    margin-left: 3em;
 }
 
 .work-scroll-container {
