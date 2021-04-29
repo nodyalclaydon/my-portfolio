@@ -7,127 +7,47 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no" />
     </head>
     <body>
+        <!--viewport border-->
+        <div id="right"></div>
+        <div id="left"></div>
+        <div id="top">
+            <img src="img/CY-Logo.png" id="logo" />
+            <button class="menu-btn">menu</button>
+            <ul class="navbar">
+                <li class="menu-item"><a href="#about">about me</a></li>
+                <li class="menu-item"><a href="#skills">skills</a></li>
+                <li class="menu-item"><a href="#work">projects</a></li>
+                <li class="menu-item"><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+        <!--end viewport border-->
         <div class="scroll-container">
         <section class="header-container">
-            <div class="polaroid">
-                <img src="img/clay.jpeg" alt="portrait" class="image image-develop" />
-                <h1 class="caption">clay raymer, 2021</h1>
-            </div>
-            <div class="info">
-                <h1 class="headline tilt-a">web developer</h1>
-                <h2 class="sub-headline tilt-b">overland park, ks</h2>
-                <ul class="menu">
-                    <li class="menu-item"><a href="#about">about me</a></li>
-                    <li class="menu-item"><a href="#skills">skills</a></li>
-                    <li class="menu-item"><a href="#work">projects</a></li>
-                    <li class="menu-item"><a href="#contact">contact</a></li>
-                </ul>
-            </div>
-        </section>
+            <h1>This is some placeholder text showing the start of the first section.</h1>
+        </section> <!--end header-container-->
+
         <a id ="about">
         <section class="about-container">
-            <h1 class="section-header tilt-b">Hi, my name is Clay.</h1>
-            <p class="about-text swipe-right">I am a web developer.</p>
-            <p class="about-text swipe-left">my focus is to write clean, elegant code</p>
-            <p class="about-text swipe-right">...and to keep learning and evolving with new technologies.</p>
-            <p class="about-text swipe-left">check out some of my work!</p>
-        </section>
+            <h1>Start of second section.</h1>
+        </section> <!--end about-container-->
         </a>
 
         <a id="skills">
         <section class="skills-container">
-            <h1 class="section-header tilt-a">platforms & languages</h1>
-            <div class="icon-container">
-                <img class="icon tilt-a" src="img/html5-logo.png" alt="html5 logo" />
-                <img class="icon tilt-b" src="img/css3-logo.png" alt="css3 logo" />
-                <img class="icon tilt-a" src="img/javascript-logo.png" alt="javascript logo" />
-                <img class="icon tilt-b" src="img/react-logo.png" alt="react logo" />
-                <img class="icon tilt-a" src="img/git-logo.png" alt="git logo" />
-                <img class="icon tilt-b" src="img/vscode-logo.png" alt="visual studio code logo" />
-                <!-- <img class="icon tilt-a" src="img/illustrator-logo.png" alt="adobe illustrator logo" /> -->
-            </div>
-        </section>
+            <h1>Start of third section.</h1>
+        </section> <!--end skills-container-->
         </a>
 
         <a id="work">
         <section class="work-container">
-            <h1 class="section-header tilt-b">Experience</h1>
-            <p class="section-text tilt-a">some recent projects...</p>
-            <div class="work-scroll-container">
-                <div class="project-card-flip-container">
-                    <div class="project-card">
-                        <div class="project-card-front">
-                            <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">photo store</h1>
-                        </div>
-                        <div class="project-card-back">
-                            <h1 class="project-info-header">react photography store</h1>
-                            <p class="project-info">Store website built in React with styled components. 
-                                Users can browse three different categories of photography, add images to
-                                their cart and checkout. Photography is from the Unsplash API, and photographers
-                                are credited on each image card.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="project-card-flip-container">
-                    <div class="project-card">
-                        <div class="project-card-front">
-                            <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">Quiz Game</h1>
-                        </div>
-                        <div class="project-card-back">
-                            <h1 class="project-info-header">Quiz Game</h1>
-                            <p class="project-info">Test your knowledge by taking this quiz. Quiz questions and answers
-                                come from the open trivia databasse API. Users select one of 8 categories and determine
-                                quiz length. A score of 50% or higher is required to pass...which is easier said than done.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="project-card-flip-container">
-                    <div class="project-card">
-                        <div class="project-card-front">
-                            <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">pacman!</h1>
-                        </div>
-                        <div class="project-card-back">
-                            <h1 class="project-info-header">pacman game</h1>
-                            <p class="project-info">Who doesn't love pacman! This project is built in vanilla javascript
-                                and relies heavily on css animations for smooth character movements. If you can complete 
-                                level one, I'll create level two next.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card-flip-container">
-                    <div class="project-card">
-                        <div class="project-card-front">
-                            <img src="img/clay.jpeg" alt="portrait" class="image" />
-                            <h1 class="caption">Netflix clone</h1>
-                        </div>
-                        <div class="project-card-back">
-                            <h1 class="project-info-header">Netflix Clone</h1>
-                            <p class="project-info">This was a project from a course on Scrimba. It is built
-                                in React and uses styled components. Users can create an account (firebase) and
-                                login to browse films and series. Aside from only having one playable video, 
-                                this is a complete replica of Netflix.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <h1>Start of fourth section.</h1>
+        </section> <!--end work-container-->
         </a>
 
         <a id="contact">
         <section class="contact-container">
-            <h1 class="section-header tilt-a">Contact</h1>
-            <p class="section-text tilt-b">let's talk!</p>
             <!-- DISABLE FORM IF NOT FILLED OUT!!!! and empty fields after submit -->
+            <h1>Start of fifth section.</h1>
             <form 
                 accept-charset="UTF-8"    
                 action="https://getform.io/f/7b9c1fe9-d3c1-455e-ac74-69ce83480ff6" 
@@ -144,11 +64,10 @@
                 <textarea class="form-inputs" type="text" name="message" rows="8" id="message" required></textarea><br><br>
                 <button type="submit" id="submit-btn">send</button>
               </form>
-        </section>
+        </section> <!--end contact-container-->
         </a>
 
-        </div> <!--scroll-container end-->
-        <script src="card.js"></script>
-        <script src="animate.js"></script>
+        </div> <!--end scroll-container-->
+        <script src="index.js"></script>
     </body>
 </html>
