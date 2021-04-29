@@ -2,7 +2,7 @@
 * {
     margin: 0;
     font-size: 10px;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -16,6 +16,12 @@ section {
     padding: 6em 3em 3em;
     border-bottom: var(--white) solid 3em; /* to show section separation on scroll (instead of fixed border)*/
 }
+
+/* Photo by <a href="https://unsplash.com/@alexkixa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandre Debiève</a> on <a href="https://unsplash.com/s/photos/technology?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+/* Photo by <a href="https://unsplash.com/@jstrippa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">James Harrison</a> on <a href="https://unsplash.com/s/photos/code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+/* Photo by <a href="https://unsplash.com/@oskaryil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Oskar Yildiz</a> on <a href="https://unsplash.com/s/photos/code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+/* Photo by <a href="https://unsplash.com/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">engin akyurt</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+/* Photo by <a href="https://unsplash.com/@tvick?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Taylor Vick</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
 
 /* -------- VIEWPORT BORDERS -------- */
 
@@ -51,6 +57,12 @@ section {
 
 section {
     scroll-snap-align: start;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
 }
 
 /* -------- MENU -------- */
@@ -64,6 +76,7 @@ section {
     top: 5px;
     left: 5px;
     width: 40px;
+    z-index: 1;
 }
 
 .menu-btn {
@@ -71,31 +84,43 @@ section {
     padding: 5px 10px;
     border: none;
     display: block;
+    position: relative;
     margin: 1em auto 0;
     background: var(--white);
+    z-index: 1;
 }
 
 .navbar {
-    height: 0;
+    height: 70px;
     width: calc(100vw - 6em);
     margin: auto;
     overflow: hidden;
     background: var(--white);
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    transition: height 300ms ease-in-out;
+    transform: translateY(-100px);
+    transition: transform 400ms ease-in-out;
+    z-index: 0;
 }
 
 .navbar.show-menu {
-    height: 70px;
+    transform: translateY(0);
 }
 
 .menu-item {
     list-style: none;
     margin-bottom: 1em;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: transform 600ms ease-in-out, opacity 100ms ease-in;
+}
+
+.menu-item.show-menu {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .menu-item a {
@@ -104,10 +129,58 @@ section {
     font-size: 1.6rem;
 }
 
+/* -------- Page Headers -------- */
+
+.page-header {
+    font-family: "Noto Serif", serif;
+    font-size: 3rem;
+    color: var(--white);
+    text-transform: capitalize;
+    margin: 2em 0 0 20px;
+}
+
+.page-subheader {
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 1.4em;
+    color: var(--white);
+    margin: .5em 0 0 20px;
+    padding-left: 1em;
+    border-left: solid rgb(185, 0, 0) 5px;
+}
+
 /* --------Title Page-------- */
+
+.title-container {
+   background-image: url(img/james-harrison-vpOeXr5wmR4-unsplash.jpg);
+}
 
 h1 {
     color: var(--white);
+}
+
+/* -------- About Page -------- */
+
+.about-container {
+    background-image: url(img/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg);
+}
+
+/* -------- Skills Page -------- */
+
+.skills-container {
+    background-image: url(img/engin-akyurt-o-99rrlwNVY-unsplash.jpg);
+}
+
+/* -------- Work Page -------- */
+
+.work-container {
+    background-image: url(img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg);
+}
+
+/* -------- Contact Page -------- */
+
+.contact-container {
+    background-image: url(img/taylor-vick-M5tzZtFCOfs-unsplash.jpg);
 }
 
 /* ======= MEDIA QUERIES ======== */

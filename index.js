@@ -1,8 +1,12 @@
 const menuBtn = document.querySelector(".menu-btn")
 const navBar = document.querySelector(".navbar")
+const menuItem = document.querySelectorAll(".menu-item")
 
 menuBtn.addEventListener("click", function() {
     navBar.classList.toggle("show-menu")
+    menuItem.forEach(item => {
+        item.classList.toggle("show-menu")
+    })
 })
 
 // const icons = document.querySelectorAll(".icon")
