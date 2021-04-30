@@ -15,6 +15,15 @@ section {
     background-color: var(--black);
     padding: 6em 3em 3em;
     border-bottom: var(--white) solid 3em; /* to show section separation on scroll (instead of fixed border)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
 }
 
 /* Photo by <a href="https://unsplash.com/@alexkixa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandre Debiève</a> on <a href="https://unsplash.com/s/photos/technology?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
@@ -57,12 +66,6 @@ section {
 
 section {
     scroll-snap-align: start;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
 }
 
 /* -------- MENU -------- */
@@ -74,7 +77,7 @@ section {
 #logo {
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 10px;
     width: 40px;
     z-index: 1;
 }
@@ -129,7 +132,7 @@ section {
     font-size: 1.6rem;
 }
 
-/* -------- Page Headers -------- */
+/* -------- Page Styles -------- */
 
 .page-header {
     font-family: "Noto Serif", serif;
@@ -149,6 +152,15 @@ section {
     border-left: solid rgb(185, 0, 0) 5px;
 }
 
+/* .text-area {
+    
+} */
+
+.content-area {
+    width: 100%;
+    overflow: hidden;
+}
+
 /* --------Title Page-------- */
 
 .title-container {
@@ -157,6 +169,14 @@ section {
 
 h1 {
     color: var(--white);
+}
+
+.clay-photo {
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 3em;
+    width: 60%;
+    border: 10px solid var(--white);
 }
 
 /* -------- About Page -------- */
@@ -171,6 +191,24 @@ h1 {
     background-image: url(img/engin-akyurt-o-99rrlwNVY-unsplash.jpg);
 }
 
+.tech-logos {
+    width: 50%;
+    display: none;
+    margin: 0 auto;
+}
+
+.tech-logos.display {
+    display: block;
+    animation: appear 1500ms ease-in-out;
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    40% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* -------- Work Page -------- */
 
 .work-container {
@@ -181,6 +219,49 @@ h1 {
 
 .contact-container {
     background-image: url(img/taylor-vick-M5tzZtFCOfs-unsplash.jpg);
+}
+
+.contact-form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+label {
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.form-inputs {
+    width: 100%;
+    margin: .5em 0 1em -0.5em;
+    padding: .5em;
+    border-radius: 4px;
+    outline: none;
+    background-color: var(--white);
+    border:rgb(185, 0, 0) 1px solid;
+}
+
+.form-inputs:focus {
+    background-color:rgb(220, 220, 220);
+}
+
+#submit-btn {
+    background-color: rgb(185, 0, 0);
+    color: var(--white);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+#submit-btn:hover,
+#submit-btn:focus {
+    border: var(--white) solid 1px;
 }
 
 /* ======= MEDIA QUERIES ======== */

@@ -22,55 +22,86 @@
         </div>
         <!--end viewport border-->
         <div class="scroll-container">
+
         <section class="title-container">
-            <h1 class="page-header">clay raymer</h1>
-            <h3 class="page-subheader">web developer<br>overland park, ks</h3>
+            <div class="text-area">
+                <h1 class="page-header">clay raymer</h1>
+                <h3 class="page-subheader">web developer<br>overland park, ks</h3>
+            </div>
+            <div class="content-area">
+                <img src="img/clay.jpeg" alt="picture of Clay" class="clay-photo" />
+            </div>
         </section> <!--end header-container-->
 
         <a id ="about">
         <section class="about-container">
-            <h1 class="page-header">about me</h1>
-            <h3 class="page-subheader">Hi, my name is Clay.<br>I love to code.<br></h3>
+            <div class="text-area">
+                <h1 class="page-header">about me</h1>
+                <h3 class="page-subheader">Hi, my name is Clay.<br>I love to code.<br></h3>
+            </div>
+            <div class="content-area">
+
+            </div>
         </section> <!--end about-container-->
         </a>
 
         <a id="skills">
         <section class="skills-container">
-            <h1 class="page-header">what I do</h1>
-            <h3 class="page-subheader">Languages & Frameworks: HTML5, CSS3, ES6/Javascript, React <br>
-                Software: Visual Studio Code, Adobe Illustrator, Adobe Photoshop<br>
-                Version Control: Git</h3>
+            <div class="text-area">
+                <h1 class="page-header">what I do</h1>
+                <h3 class="page-subheader">Languages & Frameworks: HTML5, CSS3, ES6/Javascript, React <br>
+                    Software: Visual Studio Code, Adobe Illustrator, Adobe Photoshop<br>
+                    Version Control: Git, GitHub</h3>
+            </div>
+           <div class="content-area">
+                <img src="img/html5-logo.png" alt="logo" class="tech-logos" />
+                <img src="img/css3-logo.png" alt="logo" class="tech-logos" />
+                <img src="img/javascript-logo.png" alt="logo" class="tech-logos" />
+                <img src="img/react-logo.png" alt="logo" class="tech-logos" />
+                <img src="img/git-logo.png" alt="logo" class="tech-logos" />
+                <img src="img/vscode-logo.png" alt="logo" class="tech-logos" />  
+           </div>
         </section> <!--end skills-container-->
         </a>
 
         <a id="work">
         <section class="work-container">
-            <h1 class="page-header">projects</h1>
-            <h3 class="page-subheader">Take a look at some of my recent projects.</h3>
+            <div class="text-area">
+                <h1 class="page-header">projects</h1>
+                <h3 class="page-subheader">Take a look at some of my recent projects.</h3>
+            </div>
+            <div class="content-area">
+                  
+            </div>
         </section> <!--end work-container-->
         </a>
 
         <a id="contact">
         <section class="contact-container">
             <!-- DISABLE FORM IF NOT FILLED OUT!!!! and empty fields after submit -->
-            <h1 class="page-header">contact</h1>
-            <h3 class="page-subheader">Let's get in touch!</h3>
-            <form 
+            <div class="text-area">
+                <h1 class="page-header">contact</h1>
+                <h3 class="page-subheader">Let's get in touch!</h3>
+            </div>
+            <div class="content-area">
+                <form 
+                class="contact-form"
                 accept-charset="UTF-8"    
                 action="https://getform.io/f/7b9c1fe9-d3c1-455e-ac74-69ce83480ff6" 
                 method="POST"
                 enctype="multipart/form-data"
                 target="_blank" id="form">
                 <label for="full-name">full name:</label><br>
-                <input class="form-inputs" type="text" name="name" id="full-name" required><br><br>
+                <input class="form-inputs" type="text" name="name" id="full-name" placeholder="---" required><br><br>
                 <label for="email">email address:</label><br>
-                <input class="form-inputs" type="email" name="email" id="email" required><br><br>
+                <input class="form-inputs" type="email" name="email" id="email" placeholder="---" required><br><br>
                 <label for="subject">subject:</label><br>
-                <input class="form-inputs" type="text" name="subject" id="subject" required><br><br>
+                <input class="form-inputs" type="text" name="subject" id="subject" placeholder="---" required><br><br>
                 <label for="message">message:</label><br>
-                <textarea class="form-inputs" type="text" name="message" rows="8" id="message" required></textarea><br><br>
+                <textarea class="form-inputs" type="text" name="message" rows="8" id="message" placeholder="---" required></textarea><br><br>
                 <button type="submit" id="submit-btn">send</button>
               </form>
+            </div>
         </section> <!--end contact-container-->
         </a>
 
