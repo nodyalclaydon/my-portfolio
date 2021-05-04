@@ -81,6 +81,13 @@ section {
     left: 10px;
     width: 40px;
     z-index: 1;
+    cursor: pointer;
+    transition: transform 400ms ease-in-out;
+}
+
+#logo:hover,
+#logo:focus {
+    transform: rotateZ(360deg);
 }
 
 .menu-btn {
@@ -92,11 +99,30 @@ section {
     margin: 1em auto 0;
     background: var(--white);
     z-index: 1;
+    cursor: pointer;
+}
+
+.underline:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--red);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 300ms ease-in-out;
+}
+
+.underline:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .navbar {
     height: 70px;
-    width: calc(100vw - 6em);
+    width: calc(100vw - 5em);
     margin: auto;
     overflow: hidden;
     background: var(--white);
@@ -114,6 +140,7 @@ section {
 }
 
 .menu-item {
+    position: relative;
     list-style: none;
     margin-bottom: 1em;
     cursor: pointer;
@@ -141,6 +168,9 @@ section {
     color: var(--white);
     text-transform: capitalize;
     margin: 2em 0 0 20px;
+    opacity: 0;
+    transform: translateX(-100px) translateY(-50px);
+    transition: all 400ms ease-in; /* add cubic-bezier intead of ease-in */
 }
 
 .page-subheader {
@@ -151,15 +181,28 @@ section {
     margin: .5em 0 0 20px;
     padding-left: 1em;
     border-left: solid var(--red) 5px;
+    opacity: 0;
+    transform: translateX(-100px) translateY(50px);
+    transition: all 400ms ease-in;
 }
 
-/* .text-area {
-    
-} */
+.page-header.appear,
+.page-subheader.appear {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
 
 .content-area {
     width: 100%;
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(100px) translateY(-100px);
+    transition: all 400ms ease-in;
+}
+
+.content-area.appear {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
 }
 
 /* --------Title Page-------- */
@@ -177,6 +220,7 @@ h1 {
     display: block;
     margin: 0 auto 3em;
     width: 60%;
+    max-width: 350px;
     border: 10px solid var(--white);
 }
 
@@ -194,6 +238,7 @@ h1 {
 
 .tech-logos {
     width: 50%;
+    max-width: 250px;
     display: none;
     margin: 0 auto;
 }
@@ -219,8 +264,9 @@ h1 {
 .carousel {
     position: relative;
     overflow: visible;
-    height: 350px;
+    height: 60%;
     width: 80%;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -231,7 +277,6 @@ h1 {
 }
 
 .carousel__track-container {
-    background: lightgreen;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -260,8 +305,9 @@ h1 {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--white);
-    background: transparent;
+    background: var(--red);
     border: 0;
+    border-radius: 3px;
     cursor: pointer;
 }
 
@@ -317,7 +363,7 @@ label {
 
 .form-inputs {
     width: 100%;
-    margin: .5em 0 1em -0.5em;
+    margin: .5em 0 0 -0.5em;
     padding: .5em;
     border-radius: 4px;
     outline: none;
@@ -347,14 +393,47 @@ label {
 
 /* ======= MEDIA QUERIES ======== */
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
+    * { font-size: 12px; }
 
+    #logo {
+        top: 12px;
+        left: 16px;
+        width: 40px;
+    }
 }
 
 @media (min-width: 600px) {
+    .clay-photo { margin: 0 3em 0 auto; }
 
+    .tech-logos { margin: 0 3em 0 auto; }
+
+    .page-header { margin: 2em 0 0 50px; }
+
+    .page-subheader { margin: .5em 0 0 50px; }
+
+    .carousel__button--left { left: -50px; }
+
+    .carousel__button--right { right: -50px; }
+
+    .carousel__button { padding: 5px 10px; }
 }
 
 @media (min-width: 1000px) {
+    * { font-size: 14px; }
 
+    #logo {
+        top: 15px;
+        left: 19px;
+        width: 45px;
+    }
+
+    .page-header { margin: 2em 0 0 80px; }
+
+    .page-subheader { margin: .5em 0 0 80px; }
+}
+
+@media (min-width: 1200px) {
+    .page-header { font-size: 3.5rem; }
+    .page-subheader { font-size: 1.8rem; }
 }

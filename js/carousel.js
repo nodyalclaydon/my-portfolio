@@ -5,16 +5,18 @@ const prevButton = document.querySelector(".carousel__button--left")
 const dotsNav = document.querySelector(".carousel__nav")
 const dots = Array.from(dotsNav.children)
 
-const slideWidth = slides[0].getBoundingClientRect().width
+
 
 //arrange slides next to one another
 const setSlidePosition = (slide, index) => {
+    const slideWidth = slides[0].getBoundingClientRect().width
     slide.style.left = slideWidth * index + "px"
 }
-slides.forEach(setSlidePosition)
+slides.forEach(setSlidePosition) //initial set slide position
 
 //move to new slide functions
 const moveToSlide = (track, currentSlide, targetSlide) => {
+    slides.forEach(setSlidePosition) //resets slide position each time to allow browser window resizing
     track.style.transform = "translateX(-" + targetSlide.style.left + ")"
     currentSlide.classList.remove("current-slide")
     targetSlide.classList.add("current-slide")
