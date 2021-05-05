@@ -5,7 +5,7 @@ const contentAreas = document.querySelectorAll(".content-area")
 const appearOptions = {
     root: null,
     threshold: 0,
-    rootMargin: "-100px 0px"
+    rootMargin: "0px"
 }
 
 const appearObserver = new IntersectionObserver(function(entries) {
