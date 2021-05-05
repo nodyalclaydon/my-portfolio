@@ -16,6 +16,7 @@ section {
     background-color: var(--black);
     padding: 6em 3em 3em;
     border-bottom: var(--white) solid 3em; /* to show section separation on scroll (instead of fixed border)*/
+    overflow: hidden; /* eliminates side scroll for content that hasn't loaded onto screen.*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,7 +38,8 @@ section {
 
 #top, #right, #bottom, #left {
     background: var(--white);
-    position: fixed;
+    position: absolute; /* this with z-index makes content stay behind borders */
+    z-index: 1;
 }
 
 #top {
@@ -296,6 +298,42 @@ h1 {
     top: 0;
     bottom: 0;
     width: 100%;
+}
+
+.carousel__slide-content {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    margin: auto;
+    height: 101%;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: opacity 300ms ease-in-out;
+}
+
+.carousel__header {
+    margin: 25px auto;
+    font-size: 2rem;
+    font-family: "Nato Serif", serif;
+    color: var(--white);
+    text-transform: capitalize;
+    padding-bottom: 3px;
+    border-bottom: solid 4px var(--red);
+}
+
+.carousel__p {
+    margin: 15px;
+    color: var(--white);
+    font-weight: 100;
+    font-size: 1.6rem;
+}
+
+.carousel__slide-content:hover,
+.carousel__slide-content:focus {
+    opacity: 1;
 }
 
 .carousel__button {
