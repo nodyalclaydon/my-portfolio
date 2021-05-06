@@ -50,8 +50,9 @@ section {
 }
 
 #left, #right {
-    top: 0;
-    bottom: 0;
+    /* top: 0; */
+    /* bottom: 0; */
+    height: 100%;
     width: 3em;
 }
 
@@ -347,6 +348,7 @@ h1 {
     border: 0;
     border-radius: 3px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .carousel__button--left {
@@ -454,7 +456,6 @@ label {
 
     .carousel__button--right { right: -50px; }
 
-    .carousel__button { padding: 5px 10px; }
 }
 
 @media (min-width: 1000px) {
@@ -469,6 +470,8 @@ label {
     .page-header { margin: 2em 0 0 80px; }
 
     .page-subheader { margin: .5em 0 0 80px; }
+
+    .carousel__button { padding: 5px 10px; }
 }
 
 @media (min-width: 1200px) {
