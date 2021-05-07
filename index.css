@@ -12,7 +12,7 @@
 }
 
 section {
-    height: calc(100vh); /* makes each section exact height of vp minus borders*/
+    height: calc(100vh);
     background-color: var(--black);
     box-sizing: border-box;
     padding: 6em 3em;
@@ -51,8 +51,6 @@ section {
 }
 
 #left, #right {
-    /* top: 0; */
-    /* bottom: 0; */
     height: 100vh;
     width: 3em;
 }
@@ -333,6 +331,27 @@ h1 {
     font-size: 1.6rem;
 }
 
+.carousel__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carousel__link-h {
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.carousel__link-h a {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
 .carousel__slide-content:hover,
 .carousel__slide-content:focus {
     opacity: 1;
@@ -422,9 +441,10 @@ label {
     padding: 5px 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: none;
+    border: transparent solid 1px;
     outline: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 #submit-btn:hover,
