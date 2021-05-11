@@ -5,7 +5,7 @@ const prevButton = document.querySelector(".carousel__button--left")
 const dotsNav = document.querySelector(".carousel__nav")
 const dots = Array.from(dotsNav.children)
 
-
+console.log(slides)
 
 //arrange slides next to one another
 const setSlidePosition = (slide, index) => {

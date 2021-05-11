@@ -222,7 +222,7 @@ h1 {
     display: block;
     margin: 0 auto 3em;
     width: 60%;
-    max-width: 350px;
+    max-width: 250px;
     border: 10px solid var(--white);
 }
 
@@ -261,6 +261,7 @@ h1 {
 
 .work-container {
     background-image: url(img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg);
+    padding: 3em 3em;
 }
 
 .carousel {
@@ -316,7 +317,7 @@ h1 {
 .carousel__header {
     margin: 25px auto;
     font-size: 2rem;
-    font-family: "Nato Serif", serif;
+    font-family: "Noto Serif", serif;
     color: var(--white);
     text-transform: capitalize;
     padding-bottom: 3px;
@@ -345,13 +346,15 @@ h1 {
     padding: 5px 10px;
 }
 
+.carousel__link-a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
 .carousel__link-h:hover {
     color: red;
     border: 3px var(--white) solid;
-}
-
-.carousel__link-h a {
-    display: block;
 }
 
 .carousel__slide-content:hover,
@@ -408,11 +411,12 @@ h1 {
 
 .contact-container {
     background-image: url(img/taylor-vick-M5tzZtFCOfs-unsplash.jpg);
+    padding: 3em 3em;
 }
 
 .contact-form {
     width: 80%;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
