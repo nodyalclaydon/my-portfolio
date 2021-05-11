@@ -14,8 +14,8 @@
             <a href="#home"><img src="img/CY-Logo.png" id="logo" /></a>
             <button class="menu-btn underline">menu</button>
             <ul class="navbar">
-                <li class="menu-item underline"><a href="#about">about me</a></li>
-                <li class="menu-item underline"><a href="#skills">skills</a></li>
+                <li class="menu-item underline"><a href="#about">about</a></li>
+                <li class="menu-item underline"><a href="#skills">capabilities</a></li>
                 <li class="menu-item underline"><a href="#work">projects</a></li>
                 <li class="menu-item underline"><a href="#contact">contact</a></li>
             </ul>
@@ -41,22 +41,22 @@
                 <h1 class="page-header">about me</h1>
                 <h3 class="page-subheader">
                     Hi, my name is Clay.<br>
-                    Here are some of my certifications:<br>
-                    
+                    I am an experienced advertising account executive, sales manager,
+                    and <span>frontend web developer</span>.
                 </h3>
             </div>
             <div class="content-area">
-
+                <!-- ADD LINKED IN ICON + RESUME ICON + GITHUB ICON -->
             </div>
         </section> <!--end about-container-->
 
         <a id="skills"></a>
         <section class="skills-container">
             <div class="text-area">
-                <h1 class="page-header">what I do</h1>
-                <h3 class="page-subheader">Languages & Frameworks: HTML5, CSS3, ES6/Javascript, React <br>
-                    Software: Visual Studio Code, Adobe Illustrator, Adobe Photoshop<br>
-                    Version Control: Git, GitHub</h3>
+                <h1 class="page-header">what I know</h1>
+                <h3 class="page-subheader"><span>Languages & Frameworks:</span> HTML5, CSS3, ES6/Javascript, React <br>
+                    <span>Software:</span> Visual Studio Code, Adobe Illustrator, Adobe Photoshop<br>
+                    <span>Version Control:</span> Git</h3>
             </div>
            <div class="content-area">
                 <img src="img/html5-logo.png" alt="logo" class="tech-logos" />
@@ -82,10 +82,14 @@
                               <img class="carousel__image" src="img/react-store-ss.png" alt="" />
                               <div class="carousel__slide-content" tabindex="0">
                                   <h1 class="carousel__header">React Store</h1>
-                                  <p class="carousel__p">Store built in react. lada da da da da lada da lada.</p>
+                                  <p class="carousel__p">
+                                      Faux store built in React with styled components. Photography and 
+                                      related information is fetched from the Unsplash API. This is not an 
+                                      actual store that sells a product...but it could be!
+                                  </p>
                                   <div class="carousel__links">
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view code</a></h3>
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view site</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/clays-store" target="_blank">view code</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://nodyalclaydon.github.io/clays-store/" target="_blank">view site</a></h3>
                                   </div>
                               </div>
                           </li>
@@ -94,10 +98,15 @@
                               <img class="carousel__image" src="img/quiz-game-ss.png" alt="" />
                               <div class="carousel__slide-content" tabindex="0">
                                   <h1 class="carousel__header">Quiz Game</h1>
-                                  <p class="carousel__p">Quiz that uses whatever API.</p>
+                                  <p class="carousel__p">
+                                      This is a quiz game I built using HTML, CSS, vanilla Javascript and the Open Trivia 
+                                      Database API. Users enter their name, select a category and choose the number of 
+                                      questions for the quiz. A score of 50% or better is required to pass (not as easy
+                                      as it sounds). 
+                                  </p>
                                   <div class="carousel__links">
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view code</a></h3>
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view site</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/Quiz-Game" target="_blank">view code</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://nodyalclaydon.github.io/Quiz-Game/" target="_blank">view site</a></h3>
                                   </div>
                               </div>
                           </li>
@@ -105,11 +114,16 @@
                           <li class="carousel__slide">
                               <img class="carousel__image" src="img/pacman-ss.png" alt="" />
                               <div class="carousel__slide-content" tabindex="0">
-                                  <h1 class="carousel__header">PacMan</h1>
-                                  <p class="carousel__p">My version of cult classic arcade game, Pacman.</p>
+                                  <h1 class="carousel__header">Pacman</h1>
+                                  <p class="carousel__p">
+                                      My version of cult classic arcade game, Pacman. This started as a project
+                                      from a larger course, but it was completed independently. It's built using
+                                      vanilla javascript and css animations. Characters move around the playing field by simply
+                                      adding and removing class names to squares on the grid.
+                                    </p>
                                   <div class="carousel__links">
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view code</a></h3>
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view site</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/pacman" target="_blank">view code</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://nodyalclaydon.github.io/pacman/" target="_blank">view site</a></h3>
                                   </div>
                               </div>
                           </li>
@@ -118,13 +132,14 @@
                             <img class="carousel__image" src="img/netflix-clone-ss.png" alt="" />
                             <div class="carousel__slide-content" tabindex="0">
                                 <h1 class="carousel__header">Netflix Clone</h1>
-                                <p class="carousel__p">Built during a code-along React course. Built Netflix from scratch. 
-                                    Login and browse films and series. Use username: email@email.com and 
-                                    password: password to login...or, create your own!
+                                <p class="carousel__p">I built a Netflix clone from scratch as a part of a Scrimba course. 
+                                    It's built using React and styled compenents. User registration and authentication is hosted by 
+                                    Firebase. You may log in with "email@email.com" and "password" to browse films and series. Or, feel free 
+                                    to create your own account! 
                                 </p>
                                 <div class="carousel__links">
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view code</a></h3>
-                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="#">view site</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/netflix-clone" target="_blank">view code</a></h3>
+                                    <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://nodyalclaydon.github.io/netflix-clone/" target="_blank">view site</a></h3>
                                 </div>
                             </div>
                             </li>

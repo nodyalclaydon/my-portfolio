@@ -34,5 +34,3 @@ function cycleLogos() {
         i = 0
     } else { i++ }
 }
-
-console.log("working!")
