@@ -15,7 +15,7 @@ section {
     height: calc(100vh);
     background-color: var(--black);
     box-sizing: border-box;
-    padding: 6em 3em;
+    padding: 6em 3em 0;
     border-bottom: var(--white) solid 3em; /* to show section separation on scroll (instead of fixed border)*/
     overflow: hidden; /* eliminates side scroll for content that hasn't loaded onto screen.*/
     display: flex;
@@ -37,7 +37,7 @@ section {
 
 /* -------- VIEWPORT BORDERS -------- */
 
-#top, #right, #bottom, #left {
+#top, #right, #left {
     background: var(--white);
     position: absolute; /* this with z-index makes content stay behind borders */
     z-index: 1;
@@ -68,7 +68,7 @@ section {
 }
 
 section {
-    scroll-snap-align: start;
+    scroll-snap-align: end;
 }
 
 /* -------- MENU -------- */
@@ -169,17 +169,16 @@ section {
     font-size: 3rem;
     color: var(--white);
     text-transform: capitalize;
-    margin: 2em 0 0 20px;
+    margin: 1.5em 0 0 20px;
     opacity: 0;
     transform: translateX(-100px) translateY(-50px);
-    transition: all 500ms ease-in; /* add cubic-bezier intead of ease-in */
+    transition: all 500ms ease-in;
 }
 
 .page-subheader {
     font-size: 1.6rem;
     font-weight: 100;
     line-height: 1.4em;
-    max-width: 60%;
     color: var(--white);
     margin: .5em 0 0 20px;
     padding-left: 1em;
@@ -202,10 +201,10 @@ section {
 
 .content-area {
     width: 100%;
-    overflow: hidden;
     opacity: 0;
     transform: translateX(100px) translateY(-100px);
     transition: all 400ms ease-in;
+    margin-bottom: 3em;
 }
 
 .content-area.appear {
@@ -213,10 +212,10 @@ section {
     transform: translateX(0) translateY(0);
 }
 
-/* --------Title Page-------- */
+/* --------About Page-------- */
 
 .title-container {
-   background-image: url(img/james-harrison-vpOeXr5wmR4-unsplash.jpg);
+   background-image: url(img/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg);
 }
 
 h1 {
@@ -234,7 +233,7 @@ h1 {
 
 /* -------- About Page -------- */
 
-.about-container {
+/* .about-container {
     background-image: url(img/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg);
 }
 
@@ -266,12 +265,22 @@ h1 {
 #scrimba {
     filter: brightness(0) invert(95%);
     margin-top: 40%;
-}
+} */
 
 /* -------- Skills Page -------- */
 
 .skills-container {
     background-image: url(img/engin-akyurt-o-99rrlwNVY-unsplash.jpg);
+}
+
+.page-subheader a {
+    text-decoration: underline;
+    color: var(--white);
+    font-size: inherit;
+}
+
+.page-subheader a:hover {
+    color: rgba(240, 240, 240, 0.8);
 }
 
 .tech-logos {
@@ -365,6 +374,7 @@ h1 {
     color: var(--white);
     font-weight: 100;
     font-size: 1.6rem;
+    overflow-y: scroll;
 }
 
 .carousel__links {
@@ -434,7 +444,7 @@ h1 {
 
 .carousel__indicator {
     border: 0;
-    border-radius: 70%;
+    border-radius: 50%;
     width: 10px;
     height: 10px;
     background: var(--white);
@@ -455,10 +465,32 @@ h1 {
     padding: 3em 3em;
 }
 
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    margin: .5em 0 0;
+}
+
+.contact-icon-a {
+    width: 3em;
+    margin-right: 1.5em;
+    transition: transform 300ms ease-in-out;
+}
+
+.contact-icon-a:hover {
+    transform: scale(1.1);
+}
+
+.contact-icon {
+    width: 100%;
+}
+
 .contact-form {
     width: 80%;
     max-width: 600px;
     margin: 0 auto;
+    overflow-x: visible;
+    overflow-y: scroll;
 }
 
 label {
@@ -469,8 +501,8 @@ label {
 }
 
 .form-inputs {
-    width: 100%;
-    margin: .5em 0 0 -0.5em;
+    width: 95%;
+    margin: .5em 0 0;
     padding: .5em;
     border-radius: 4px;
     outline: none;
@@ -540,7 +572,7 @@ label {
 
     .page-subheader { margin: .5em 0 0 80px; }
 
-    .carousel__button { padding: 5px 10px; }
+    .carousel__button { padding: 3px 10px; }
 }
 
 @media (min-width: 1200px) {

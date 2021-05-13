@@ -7,11 +7,11 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no" />
     </head>
     <body>
-        <!--viewport border-->
+        <!--viewport border & nav bar-->
         <div id="right"></div>
         <div id="left"></div>
         <div id="top">
-            <a href="#home"><img src="img/CY-Logo.png" id="logo" /></a>
+            <a href="#about"><img src="img/CY-Logo.png" id="logo" /></a>
             <button class="menu-btn underline">menu</button>
             <ul class="navbar">
                 <li class="menu-item underline"><a href="#about">about</a></li>
@@ -23,11 +23,15 @@
         <!--end viewport border-->
         <div class="scroll-container">
         
-        <a id="home"></a>
+        <a id="about"></a>
         <section class="title-container">
             <div class="text-area">
                 <h1 class="page-header">clay raymer</h1>
-                <h3 class="page-subheader">web developer<br>overland park, ks</h3>
+                <h3 class="page-subheader">
+                    experienced advertising account executive,
+                    sales manager, <br>and <span>frontend web developer.</span><br>
+                    overland park, ks
+                </h3>
             </div>
             <div class="content-area">
                 <img src="img/clay.jpeg" alt="picture of Clay" class="clay-photo" />
@@ -35,14 +39,14 @@
         </section> <!--end home-container-->
         </a>
 
-        <a id ="about">
+        <!-- <a id ="about">
         <section class="about-container">
             <div class="text-area">
                 <h1 class="page-header">about me</h1>
                 <h3 class="page-subheader">
-                    Hi, my name is Clay.<br>
                     I am an experienced advertising account executive, sales manager,
-                    and <span>frontend web developer</span>.
+                    and <span>frontend web developer</span>.<br>
+                    
                 </h3>
             </div>
             <div class="content-area about-logos">
@@ -56,15 +60,20 @@
                     <img src="img/scrimba-logo.svg" alt="scrimba certificate" class="about-logo" id="scrimba" />
                 </a>
             </div>
-        </section> <!--end about-container-->
+        </section> end about-container -->
 
         <a id="skills"></a>
         <section class="skills-container">
             <div class="text-area">
                 <h1 class="page-header">what I know</h1>
-                <h3 class="page-subheader"><span>Languages & Frameworks:</span> HTML5, CSS3, ES6/Javascript, React <br>
+                <h3 class="page-subheader"><span>Languages & Frameworks:</span> HTML5, CSS3, Javascript/ES6, React <br>
                     <span>Software:</span> Visual Studio Code, Adobe Illustrator, Adobe Photoshop<br>
-                    <span>Version Control:</span> Git</h3>
+                    <span>Version Control:</span> Git<br>
+                    <span>Certifications:</span> <a href="https://scrimba.com/certificate/uk5MrLsz/gfrontend" target="_blank">Scrimba</a>, 
+                                                <a href="https://www.udemy.com/certificate/UC-86afba8f-0183-4f54-aa8d-254e23d81c05/" target="_blank">Illustrator</a>, 
+                                                <a href="https://www.udemy.com/certificate/UC-84682f54-a0a4-4f93-bfb8-8eeff8968e6f/" target="_blank">Photoshop</a>, 
+                                                <a href="https://skillshop.exceedlms.com/student/award/53284128" target="_blank">Google Ads Search</a>
+                </h3>
             </div>
            <div class="content-area">
                 <img src="img/html5-logo.png" alt="logo" class="tech-logos" />
@@ -80,7 +89,7 @@
         <section class="work-container">
             <div class="text-area">
                 <h1 class="page-header">projects</h1>
-                <h3 class="page-subheader">Take a look at some of my recent projects.</h3>
+                <h3 class="page-subheader">Take a look at some of my recent projects. <br>Hover/tap on the images for more details.</h3>
             </div>
             <div class="content-area carousel">
                   <button class="carousel__button carousel__button--left is-hidden"><</button>
@@ -109,8 +118,7 @@
                                   <p class="carousel__p">
                                       This is a quiz game I built using HTML, CSS, vanilla Javascript and the Open Trivia 
                                       Database API. Users enter their name, select a category and choose the number of 
-                                      questions for the quiz. A score of 50% or better is required to pass (not as easy
-                                      as it sounds). 
+                                      questions for the quiz. 
                                   </p>
                                   <div class="carousel__links">
                                     <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/Quiz-Game" target="_blank">view code</a></h3>
@@ -168,10 +176,18 @@
             <!-- DISABLE FORM IF NOT FILLED OUT!!!! and empty fields after submit -->
             <div class="text-area">
                 <h1 class="page-header">contact</h1>
-                <h3 class="page-subheader">Let's get in touch!</h3>
+                <h3 class="page-subheader">Let's get in touch!<br>
+                    <div class="contact-icons">
+                        <a href="https://www.linkedin.com/in/claydon-raymer-1baa435a/" target="_blank" class="contact-icon-a">
+                            <img class="contact-icon" src="img/linkedin-logo.png" alt="linkedin profile" />
+                        </a>
+                        <a href="https://github.com/nodyalclaydon" target="_blank" class="contact-icon-a">
+                            <img class="contact-icon" src="img/github-logo.png" alt="github profile" />
+                        </a>
+                    </div>
+                </h3>
             </div>
-            <div class="content-area">
-                <form 
+            <form 
                 class="contact-form"
                 accept-charset="UTF-8"    
                 action="https://getform.io/f/7b9c1fe9-d3c1-455e-ac74-69ce83480ff6" 
@@ -187,8 +203,7 @@
                 <label for="message">message:</label><br>
                 <textarea class="form-inputs" type="text" name="message" rows="8" id="message" placeholder="---" required></textarea><br><br>
                 <button type="submit" id="submit-btn">send</button>
-              </form>
-            </div>
+            </form>
         </section> <!--end contact-container-->
 
         </div> <!--end scroll-container-->
