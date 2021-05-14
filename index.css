@@ -227,7 +227,7 @@ h1 {
     object-fit: cover;
     display: block;
     margin: 0 auto 3em;
-    width: 60%;
+    width: 150px; 
     max-width: 250px;
     border: 10px solid var(--white);
 }
@@ -238,18 +238,20 @@ h1 {
     background-image: url(img/engin-akyurt-o-99rrlwNVY-unsplash.jpg);
 }
 
- a { /* skills page links and links on work sliders */
+ .skills-container a,
+ .work-container a { /* skills page links and links on work sliders */
     text-decoration: underline;
     color: inherit;
     font-size: inherit;
 }
 
-a:hover {
+.skills-container a:hover,
+.work-container a:hover {
     color: rgba(240, 240, 240, 0.8);
 }
 
 .tech-logos {
-    width: 50%;
+    width: 150px;
     max-width: 250px;
     display: none;
     margin: 0 auto;
@@ -389,7 +391,7 @@ a:hover {
     border: 0;
     border-radius: 3px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
 
 .carousel__button--left {
@@ -452,6 +454,7 @@ a:hover {
 
 .contact-form {
     width: 80%;
+    height: fit-content;
     max-width: 600px;
     margin: 0 auto;
     overflow-x: visible;
@@ -510,11 +513,9 @@ label {
 
 @media (min-width: 600px) {
     .clay-photo,
-    .tech-logos { margin: 0 3em 0 auto; }
+    .tech-logos { margin: 0 3em 0 auto; width: 200px }
 
-    .about-logos { justify-content: flex-end; }
-
-    .page-header { margin: 2em 0 0 50px; }
+    .page-header { margin: 0 0 0 50px; }
 
     .page-subheader { margin: .5em 0 0 50px; }
 
@@ -533,14 +534,43 @@ label {
         width: 45px;
     }
 
-    .page-header { margin: 2em 0 0 80px; }
+    .clay-photo,
+    .tech-logos { width: 250px; }
+
+    .page-header { margin: 0 0 0 80px; }
 
     .page-subheader { margin: .5em 0 0 80px; }
 
     .carousel__button { padding: 3px 10px; }
+
+    .carousel {
+        margin: auto 4em auto;
+        height: 80%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content-area,
+    .contact-form {
+        margin-top: auto;
+    }
+
+    .contact-form {
+        overflow: scroll; /* scroll not working */
+    }
+
+    .title-container .content-area,
+    .skills-container .content-area {
+        width: fit-content;
+    }
+
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
     .page-header { font-size: 3.5rem; }
     .page-subheader { font-size: 1.8rem; }
-}
+} */
