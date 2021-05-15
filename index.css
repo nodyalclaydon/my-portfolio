@@ -5,6 +5,13 @@
     font-family: "Roboto", sans-serif;
 }
 
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* mobile viewport bug fix */
+}
+
+html { height: -webkit-fill-available; }
+
 :root {
    --white: rgb(240, 240, 240); 
    --black: rgb(43, 43, 43);
@@ -238,15 +245,15 @@ h1 {
     background-image: url(img/engin-akyurt-o-99rrlwNVY-unsplash.jpg);
 }
 
- .skills-container a,
- .work-container a { /* skills page links and links on work sliders */
+ .skills-links,
+ .work-links { /* skills page links and links on work sliders */
     text-decoration: underline;
     color: inherit;
     font-size: inherit;
 }
 
-.skills-container a:hover,
-.work-container a:hover {
+.skills-links:hover,
+.work-links:hover {
     color: rgba(240, 240, 240, 0.8);
 }
 
@@ -295,6 +302,7 @@ h1 {
     height: 100%;
     position: relative;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .carousel__track {
@@ -535,7 +543,7 @@ label {
     }
 
     .clay-photo,
-    .tech-logos { width: 250px; }
+    .tech-logos { width: 300px; }
 
     .page-header { margin: 0 0 0 80px; }
 
@@ -544,7 +552,7 @@ label {
     .carousel__button { padding: 3px 10px; }
 
     .carousel {
-        margin: auto 4em auto;
+        margin: auto 4em 2em;
         height: 80%;
     }
 
@@ -570,7 +578,7 @@ label {
 
 }
 
-/* @media (min-width: 1200px) {
+@media (min-width: 1200px) {
     .page-header { font-size: 3.5rem; }
     .page-subheader { font-size: 1.8rem; }
-} */
+}
