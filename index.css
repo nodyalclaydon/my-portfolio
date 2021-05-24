@@ -178,8 +178,8 @@ section {
     text-transform: capitalize;
     margin-left: 20px;
     opacity: 0;
-    transform: translateX(-100px) translateY(-50px);
-    transition: all 500ms ease-in;
+    transform: translateX(-15px) translateY(-40px);
+    transition: all 700ms cubic-bezier(.51, .99, .7, 1);
 }
 
 .page-subheader {
@@ -191,8 +191,8 @@ section {
     padding-left: 1em;
     border-left: solid var(--red) 5px;
     opacity: 0;
-    transform: translateX(-100px) translateY(50px);
-    transition: all 500ms ease-in;
+    transform: translateX(-15px) translateY(40px);
+    transition: all 700ms cubic-bezier(.51, .99, .7, 1);
 }
 
 .page-subheader span {
@@ -209,9 +209,9 @@ section {
 .content-area {
     width: 100%;
     opacity: 0;
-    transform: translateX(100px) translateY(-100px);
-    transition: all 400ms ease-in;
-    margin-bottom: 3em;
+    transform: translateX(15px) translateY(-40px);
+    transition: all 700ms cubic-bezier(.51, .99, .7, 1);
+    margin: auto;
 }
 
 .content-area.appear {
@@ -233,9 +233,9 @@ h1 {
 .clay-photo {
     object-fit: cover;
     display: block;
-    margin: 0 auto 3em;
+    margin: 0 auto;
     width: 150px; 
-    max-width: 250px;
+    max-width: 300px;
     border: 10px solid var(--white);
 }
 
@@ -259,7 +259,7 @@ h1 {
 
 .tech-logos {
     width: 150px;
-    max-width: 250px;
+    max-width: 400px;
     display: none;
     margin: 0 auto;
 }
@@ -289,7 +289,7 @@ h1 {
     height: 60%;
     width: 80%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .carousel__image {
@@ -464,7 +464,7 @@ h1 {
     width: 80%;
     height: fit-content;
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
     overflow-x: visible;
     overflow-y: scroll;
 }
@@ -520,8 +520,23 @@ label {
 }
 
 @media (min-width: 600px) {
+
+    .content-area { 
+        margin: auto 3em 3em auto; 
+        width: 400px;
+        height: fit-content;
+    }
+
+    .carousel {
+        height: 60%;
+        margin-right: 5em;
+    }
+
     .clay-photo,
-    .tech-logos { margin: 0 3em 0 auto; width: 200px }
+    .tech-logos {
+        margin: auto auto 0;
+        width: 100%;
+    }
 
     .page-header { margin: 0 0 0 50px; }
 
@@ -542,8 +557,7 @@ label {
         width: 45px;
     }
 
-    .clay-photo,
-    .tech-logos { width: 300px; }
+    .content-area { width: 500px; }
 
     .page-header { margin: 0 0 0 80px; }
 
@@ -552,7 +566,7 @@ label {
     .carousel__button { padding: 3px 10px; }
 
     .carousel {
-        margin: auto 4em 2em;
+        margin: auto 6em 2em;
         height: 80%;
     }
 
@@ -562,20 +576,10 @@ label {
         justify-content: space-around;
     }
 
-    .content-area,
-    .contact-form {
-        margin-top: auto;
-    }
-
     .contact-form {
         overflow: scroll; /* scroll not working */
+        margin: auto 0 auto;
     }
-
-    .title-container .content-area,
-    .skills-container .content-area {
-        width: fit-content;
-    }
-
 }
 
 @media (min-width: 1200px) {

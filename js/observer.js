@@ -14,7 +14,7 @@ const appearObserver = new IntersectionObserver(function(entries) {
             entry.target.classList.remove("appear")
         } else {
             entry.target.classList.add("appear")
-            // appearObserver.unobserve(entry.target)
+            // appearObserver.unobserve(entry.target) < add to cancel observer after initial appear
         }
     })
 }, appearOptions)
