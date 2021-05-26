@@ -246,14 +246,16 @@ h1 {
 }
 
  .skills-links,
- .work-links { /* skills page links and links on work sliders */
+ .work-links,
+ .resume-link { /* skills page links and links on work sliders */
     text-decoration: underline;
     color: inherit;
     font-size: inherit;
 }
 
 .skills-links:hover,
-.work-links:hover {
+.work-links:hover,
+.resume-link:hover {
     color: rgba(240, 240, 240, 0.8);
 }
 

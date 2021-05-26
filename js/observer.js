@@ -3,7 +3,7 @@ const subHeadlines = document.querySelectorAll(".page-subheader")
 const contentAreas = document.querySelectorAll(".content-area")
 
 const appearOptions = {
-    root: null,
+    root: document.body,
     threshold: 0,
     rootMargin: "0px"
 }
