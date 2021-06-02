@@ -31,9 +31,10 @@
                     experienced advertising account executive,
                     sales manager, <br>and <span>frontend web developer.</span><br>
                     overland park, ks<br>
-                    <a class="resume-link"
+                    <button class="resume-link">
+                        <a 
                         href="https://drive.google.com/file/d/1rY8meS5nMRp7YZv72jZwfzIRFRH0wG_D/view?usp=sharing"
-                        target="_blank">view resume</a>
+                        target="_blank">view resume</a></button>
                 </h3>
             </div>
             <div class="content-area">
@@ -81,8 +82,10 @@
                                   <h1 class="carousel__header">React Store</h1>
                                   <p class="carousel__p">
                                       Faux store built in React with styled components. Photography and 
-                                      related information is fetched from the Unsplash API. This is not an 
-                                      actual store that sells a product...but it could be!
+                                      related information is fetched from the Unsplash API. UseEffect hook calls three
+                                      separate fetch requests to get the data for three photo categories. Context
+                                      provider displays/hides an overlay when photos are clicked and adds/removes items 
+                                      from the cart.
                                   </p>
                                   <div class="carousel__links">
                                     <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/clays-store" target="_blank">view code</a></h3>
@@ -98,8 +101,10 @@
                                   <p class="carousel__p">
                                       This is a quiz game I built using HTML, CSS, vanilla Javascript and the 
                                       <a href="https://opentdb.com/api_config.php" class="work-links" target="_blank">Open Trivia 
-                                      Database API.</a> Users enter their name, select a category and choose the number of 
-                                      questions for the quiz. 
+                                      Database API.</a> Async function calls API fetch request based on a switch statement 
+                                      that includes 8 possible quiz categories that the user selects. Then, a for loop 
+                                      randomizes the order of the possible answers that are displayed for each question, and 
+                                      class names are added and removed to indicate correct/incorrect answers.
                                   </p>
                                   <div class="carousel__links">
                                     <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/Quiz-Game" target="_blank">view code</a></h3>
@@ -148,8 +153,8 @@
                                     <p class="carousel__p">
                                         This beer browsing app was built as a part of my Scrimba course. It uses the 
                                         <a href="https://punkapi.com/" class="work-links" target="_blank">Punk API</a> to navigate through Brewdog's expansive 
-                                        back catalogue of beer in an easy-to-use way.
-                                        I learned how to effectively use pagination while completing this project.
+                                        back catalogue of beer in an easy-to-use way. Filter the displayed data by IBU and ABV, and pagination is 
+                                        enabled when results are more than 25 items.
                                     </p>
                                     <div class="carousel__links">
                                         <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/beer-app" target="_blank">view code</a></h3>
