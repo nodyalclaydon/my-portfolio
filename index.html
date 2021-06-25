@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
         <title>Claydon Raymer 😄</title>
         <link href="index.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no" />
-        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     </head>
     <body>
         <!--viewport border & nav bar-->
@@ -116,6 +116,23 @@
                           </li>
 
                           <li class="carousel__slide">
+                            <img class="carousel__image" src="img/taco-villa-ss.png" alt="" />
+                            <div class="carousel__slide-content" tabindex="0">
+                                <h1 class="carousel__header">Taco Villa - Restaurant</h1>
+                                <p class="carousel__p">
+                                    Static website for the one and only Taco Villa of Topeka, KS. The menu content comes from a
+                                    json file and uses a function to map over the data to return HTML content. The rest of the site
+                                    is built in HTML, CSS and a little bit of Javascript. Navigation on small screens defaults to the 
+                                    hamburger menu, while 1000px+ screens change to a fixed menu in the header.
+                                  </p>
+                                <div class="carousel__links">
+                                  <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://github.com/nodyalclaydon/taco_villa" target="_blank">view code</a></h3>
+                                  <h3 class="carousel__link-h"><a class="carousel__link-a" href="https://nodyalclaydon.github.io/taco_villa/" target="_blank">view site</a></h3>
+                                </div>
+                            </div>
+                        </li>
+
+                          <li class="carousel__slide">
                               <img class="carousel__image" src="img/pacman-ss.png" alt="" />
                               <div class="carousel__slide-content" tabindex="0">
                                   <h1 class="carousel__header">Pacman</h1>
@@ -204,6 +221,7 @@
                   <button class="carousel__button carousel__button--right">></button>
                   <div class="carousel__nav">
                       <button class="carousel__indicator current-slide"></button>
+                      <button class="carousel__indicator"></button>
                       <button class="carousel__indicator"></button>
                       <button class="carousel__indicator"></button>
                       <button class="carousel__indicator"></button>
